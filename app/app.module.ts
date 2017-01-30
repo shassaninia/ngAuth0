@@ -4,10 +4,13 @@ import {AppRoutingModule} from './app.routing';
 import { AppComponent }  from './app.component';
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
+import {Auth} from './services/auth.service';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
 
 @NgModule({
   imports:      [ BrowserModule, AppRoutingModule ],
   declarations: [ AppComponent,HomeComponent,ProfileComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers:[AUTH_PROVIDERS, Auth]
 })
 export class AppModule { }
